@@ -12,7 +12,6 @@ from subsai.models.faster_whisper_model import FasterWhisperModel
 from subsai.models.hugging_face_model import HuggingFaceModel
 from subsai.models.whisperX_model import WhisperXModel
 from subsai.models.whisper_model import WhisperModel
-from subsai.models.whisper_timestamped_model import WhisperTimeStamped
 from subsai.models.whispercpp_model import WhisperCppModel
 from subsai.utils import get_available_devices, available_translation_models
 from subsai.models.stable_ts_model import StableTsModel
@@ -26,12 +25,6 @@ AVAILABLE_MODELS = {
                        'as well as speech translation and language identification.',
         'url': 'https://github.com/openai/whisper',
         'config_schema': WhisperModel.config_schema,
-    },
-    'linto-ai/whisper-timestamped': {
-        'class': WhisperTimeStamped,
-        'description': 'Multilingual Automatic Speech Recognition with word-level timestamps and confidence.',
-        'url': 'https://github.com/linto-ai/whisper-timestamped',
-        'config_schema': WhisperTimeStamped.config_schema,
     },
     'ggerganov/whisper.cpp': {
         'class': WhisperCppModel,
